@@ -4,7 +4,9 @@
     {
       "type": "eventGridTrigger",
       "name": "event",
-      "direction": "in"
+      "direction": "in",
+      "eventHubName": "eventGridListen2", 
+	    "connection": "Endpoint=sb://eventneightborlyhub.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=V5SOfPBFuALGKrLThkzd22bRtSAoTqPCKMvm3s88EZI=;EntityPath=eventGridListen2"
     }
   ]
 }
