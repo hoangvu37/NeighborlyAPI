@@ -21,7 +21,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             collection = database['advertisements']
            
             query = {'_id': ObjectId(id)}
-            result = collection.find({"_id": id})
+            result = collection.find({"_id": id})[0]
             # result = result.where(result._id == id)
             print("----------result--------")
             result = dumps(result)

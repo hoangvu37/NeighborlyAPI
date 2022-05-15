@@ -17,7 +17,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             collection = database['posts']
 
             query = {'id':id}
-            result = collection.find({"_id": id})
+            result = collection.find({"_id": id})[0]
             result = dumps(result)
 
             return func.HttpResponse(result, mimetype="application/json", charset='utf-8')
